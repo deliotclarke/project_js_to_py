@@ -2,10 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_js_to_py.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                          'project_js_to_py.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
